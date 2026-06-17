@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishna Yadav | Developer Portfolio</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#111827;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.login-btn{
+background:#38bdf8;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:50px;
+padding:50px;
+flex-wrap:wrap;
+}
+
+.hero img{
+width:300px;
+height:300px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid #38bdf8;
+background:white;
+}
+
+.hero-text h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.hero-text span{
+color:#38bdf8;
+}
+
+.hero-text p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+}
+
+section{
+padding:80px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+color:#38bdf8;
+}
+
+.about{
+text-align:center;
+line-height:1.8;
+font-size:18px;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+.skill{
+background:#1e293b;
+padding:20px;
+text-align:center;
+border-radius:10px;
+transition:.3s;
+}
+
+.skill:hover{
+transform:translateY(-5px);
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+.card h3{
+margin-bottom:10px;
+color:#38bdf8;
+}
+
+.contact-form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:15px;
+border:none;
+border-radius:8px;
+}
+
+.contact-form button{
+padding:15px;
+background:#38bdf8;
+border:none;
+font-weight:bold;
+cursor:pointer;
+border-radius:8px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#111827;
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+color:black;
+padding:30px;
+border-radius:10px;
+width:350px;
+}
+
+.modal-content input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+.close{
+float:right;
+cursor:pointer;
+font-size:22px;
+}
+
+@media(max-width:768px){
+.hero-text h1{
+font-size:35px;
+}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">Krishna Yadav</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<button class="login-btn" onclick="openLogin()">Login</button>
+</nav>
+
+<section class="hero">
+
+<img src="https://i.ibb.co/Lh5KFCc8/Chat-GPT-Image-Jun-16-2026-07-55-29-PM.png" alt="Profile">
+
+<div class="hero-text">
+<h1>Hello, I'm <span>Krishna Yadav</span></h1>
+<p>Web Developer | Python Programmer</p>
+<a href="#contact" class="btn">Hire Me</a>
+</div>
+
+</section>
+
+<section id="about">
+<h2 class="title">About Me</h2>
+
+<div class="about">
+I am Krishna Yadav, a passionate Web Developer and Python Programmer.
+I create responsive websites, landing pages and web applications.
+My goal is to build modern, fast and user-friendly digital experiences.
+</div>
+
+</section>
+
+<section id="skills">
+<h2 class="title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Python</div>
+<div class="skill">GitHub</div>
+<div class="skill">Responsive Design</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Personal developer portfolio with modern design.</p>
+</div>
+
+<div class="card">
+<h3>Landing Page</h3>
+<p>Business promotion landing page with responsive layout.</p>
+</div>
+
+<div class="card">
+<h3>Python App</h3>
+<p>Utility application developed using Python.</p>
+</div>
+
+<div class="card">
+<h3>AI Website</h3>
+<p>Frontend design inspired by AI platforms.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+<h2 class="title">Contact Me</h2>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea rows="6" placeholder="Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+© 2026 Krishna Yadav | All Rights Reserved
+</footer>
+
+<div class="modal" id="loginModal">
+<div class="modal-content">
+
+<span class="close" onclick="closeLogin()">&times;</span>
+
+<h2>Login</h2>
+
+<input type="text" placeholder="Username">
+
+<input type="password" placeholder="Password">
+
+<button class="login-btn">Login</button>
+
+</div>
+</div>
+
+<script>
+
+function openLogin(){
+document.getElementById("loginModal").style.display="flex";
+}
+
+function closeLogin(){
+document.getElementById("loginModal").style.display="none";
+}
+
+window.onclick=function(event){
+let modal=document.getElementById("loginModal");
+if(event.target==modal){
+modal.style.display="none";
+}
+}
+
+</script>
+
+</body>
+</html>
